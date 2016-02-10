@@ -1,0 +1,5 @@
+{
+    "name": "Simple Session App",
+    "description": "Rudimentary application for adding events to a schedule",
+    "addons": ["heroku-postgresql:hobby-dev"]
+}

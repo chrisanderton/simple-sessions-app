@@ -1,0 +1,22 @@
+<ion-view title="Session Details" class="card-bg">
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="list card">
+            <div class="item">
+                <h2>{{session.name}}</h2>
+                <p ng-show="session.date">{{session.date | date:'EEEE, MMMM d y'}}</p>
+                <span ng-show="session.level" class="badge badge-assertive">{{session.level}}</span>
+            </div>
+            <div class="item item-body">
+                <p ng-show="session.venue"><strong>Venue: {{session.venue}}</strong></p>              
+                <p ng-show="session.description">{{session.description}}</p>
+                <button class="button button-block button-light" ng-click="saveToSchedule()">
+                    Add to Schedule
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

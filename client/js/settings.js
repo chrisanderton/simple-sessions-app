@@ -17,20 +17,7 @@ angular.module('nibs.settings', [])
 
     })
 
-    .controller('SettingsCtrl', function ($scope, $rootScope, $window, $ionicPopup, $document, $state, Activity, Picture) {
-
-        $scope.deleteActivities = function() {
-            Activity.deleteAll().success(function() {
-                $rootScope.user.status = 1;
-                $ionicPopup.alert({title: 'Nibs', content: 'Activities deleted'});
-            });
-        };
-
-        $scope.deletePictures = function() {
-            Picture.deleteAll().success(function() {
-                $ionicPopup.alert({title: 'Nibs', content: 'Pictures deleted'});
-            });
-        };
+    .controller('SettingsCtrl', function ($scope, $rootScope, $window, $ionicPopup, $document, $state) {
 
         $scope.logout = function() {
             $rootScope.user = null;
